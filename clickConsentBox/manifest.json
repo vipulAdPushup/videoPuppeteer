@@ -1,0 +1,19 @@
+{
+  "name": "Click consent bot",
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions": [
+    "https://*/*",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": ["content.js"]
+    }
+  ]
+}
